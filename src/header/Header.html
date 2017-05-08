@@ -1,0 +1,12 @@
+<div class="{{main}}">
+  <div class="{{logo}}"></div>
+  {{^hasLogin}}
+    <a class="btn btn-login" href="{{loginUrl}}">登录</a>
+    <a class="btn btn-register" href="{{loginUrl}}">注册</a>
+  {{/hasLogin}}
+  {{#hasLogin}}
+    <div class="{{user-info}}">
+    {{nickname}} | 退出
+    </div>
+  {{/hasLogin}}
+</div>

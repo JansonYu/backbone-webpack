@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>尚德社区</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta name="description" content="">
+  	<link rel="shortcut icon" href="http://www.sunlands.com/images/favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="./assets/index.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+  <div id="header"></div>
+  <div id="main"></div>
+  <div id="footer"></div>
+</div>
+<!--[if lte IE 9]>
+  <script type="text/javascript">
+  window.onerror = function(e){
+   return true;
+  }
+  if (typeof console === 'undefined') {
+    window.console = {
+      log     : function(){},
+      debug   : function(){},
+      info    : function(){},
+      warn    : function(){},
+      error   : function(){}
+    }
+  }
+  </script>
+<![endif]-->
+<script src="./lib/babelpolyfill.js"></script>
+<script type="text/javascript" src="./assets/manifest.js"></script>
+<script type="text/javascript" src="./assets/vendor.js"></script>
+<script type="text/javascript" src="./assets/index.js"></script>
+</body>
+</html>

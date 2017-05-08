@@ -1,0 +1,75 @@
+ <div class="{{main}}">
+    <div>
+        <h1 class="{{title}}">如何发ajax</h1>
+        <div>
+                <span>引用依赖：</span><code>import {getJSON} from '../common/dataService';</code>
+        </div>
+        <div>
+                <span>方法名称：</span><code>getJSON</code>
+        </div>
+        <div>
+                <span>参数：</span><code>(url, params)</code>
+        </div>
+        <div>
+                <span>例子：</span><br>
+                <code>
+                    getJSON(IF_EXIST_NEW_MESSAGES, <br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp{userId : global.userId, reqTime: util.getTime()})<br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp.then(data => this.model.set({systemMessageCount: data, userId: global.userId}))<br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp.catch(e => alert(e));<br>
+                </code>
+        </div>
+        <div class="{{spacing}}"></div>
+        <h1 class="{{title}}">如何增加router</h1>
+        <div>
+                在router.js中的routes增加route。
+                routers的key对应路由hash，value对应方法名称
+        </div>
+        <div>
+                <span>例子：</span><br>
+                <code>
+                    routes: {
+                        "":        "home",  // #home
+                        "home":        "home",  // #home
+                        "manage/:id":  "manage" // #manage/1
+                      },
+                </code>
+        </div>
+        <div><a style="color: blue;" href="#manage/123">跳转到#manage，id=123</a></div>
+        <div class="{{spacing}}"></div>
+        <h1 class="{{title}}">如何增加一个页面</h1>
+        <div>在src中为每一个页面增加一个文件夹，对应hash的第一层。如#manage对应manage文件夹</div>
+        <div>在文件夹中，新建一个js和html，分别是脚本和模板内容</div>
+        <div>js和html的名字与文件夹保持一致，首字母大写</div>
+        <div class="{{spacing}}"></div>
+        <h1 class="{{title}}">如何使用hogan</h1>
+        <div>使用mustache-loader来处理模板，注意虽然名字是mustache-loader，但是使用的是hogan</div>
+        <div>
+                <span>例子：</span><br>
+                <code>
+                    var template = require('./Header.html');<br>
+                    var data = this.model.toJSON();<br>
+                    this.$el.html(template.render(data));
+                </code>
+        </div>
+        <div class="{{spacing}}"></div>
+        <h1 class="{{title}}">前端启动server: </h1>
+        <code>npm start</code>
+        <div class="{{spacing}}"></div>
+        <h1 class="{{title}}">前端编译: </h1>
+        <code>npm run dist</code><br>
+        <span style="color:red">前端编译前，记得svn up</span><br>
+        <span style="color:red">提交编译后的代码，记得要与frontend同级的webapp目录下的编译后的代码也要提交</span>
+    </div>
+    <div class="{{spacing}}"></div>
+    <div class="{{operate}}">
+        <div class="{{icon-refresh}}"></div>
+        <div id="refreshBtn" class="{{text}}">
+            <a>刷新</a>
+        </div>
+        <div class="{{icon-gotop}}"></div>
+        <div class="{{text}}">
+            <a id="gotoTop">返回顶部</a>
+        </div>
+    </div>
+ </div>

@@ -1,0 +1,44 @@
+.main {
+    composes: p20 from './common.less';
+    min-height: 600px;
+}
+
+.title {
+    composes: tac from './common.less';
+    margin-bottom: 10px;
+}
+
+.spacing {
+    composes: w_100 mt10 mb10 from './common.less';
+    border: 1px solid #000;
+    opacity: 0.1;
+}
+
+.operate{
+    composes: w_100 ofh from './common.less';
+}
+
+.icon {
+    composes: fl from './common.less';
+    width: 24px;
+    height:24px;
+}
+
+.icon-refresh {
+    composes: icon;
+    background: url('../images/refresh.png') no-repeat;
+    background-size: contain;
+}
+
+.icon-gotop {
+    composes: ml15 from './common.less';
+    composes: icon;
+    background: url('../images/go_top.png') no-repeat;
+    background-size: contain;
+}
+
+.text {
+    composes: fl from './common.less';
+    line-height: 24px;
+    cursor: pointer;
+}

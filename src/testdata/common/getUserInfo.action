@@ -1,0 +1,8 @@
+{
+    "rs": 1,
+    "resultMessage": {
+        "hasLogin": true,
+        "userId": 123456,
+        "nickname": "hualuyao"
+    }
+}
